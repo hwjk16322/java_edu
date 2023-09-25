@@ -1,17 +1,22 @@
 package org.example;
-
-public class Car {
-
-
-    String name;
-    int speed;
-    String brand;
-    int carNumber;
-
-    void run(){
-        System.out.println(this.carNumber + " 자동차가 "+ this.speed +"km/h 로 달립니다..");
+/*
+public class CarExam {
+    public static void main(String[] args) {
+        Car car1 = new Car();
+        Car car2 = new Car("자동차");
+        Car car3 = new Car("자동차", 1234);
     }
-
 }
 
 
+public class Car {
+    String name;
+    int number;
+
+    Car(String name, int number) {
+        this.name = name;
+        this.number = number;
+    }
+}
+
+*/
