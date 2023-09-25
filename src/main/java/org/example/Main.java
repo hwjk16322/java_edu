@@ -768,7 +768,7 @@ class 병사 {
 
 
 
-/*
+
 class Main {
     public static void main(String[] args) {
         전사 a전사 = new 홍길동();
@@ -791,26 +791,27 @@ class Main {
 class 전사 {
 
     무기 a무기 = new 칼();
-
+    String 직업이름;
 
     void 공격() {
+        a무기.공격(직업이름);
     }
 }
 
 class 홍길동 extends 전사 {
-    String 직업이름 = "홍길동";
-
-    void 공격() {
-        a무기.공격(직업이름);
+    홍길동(){
+        this.직업이름 = "홍길동";
     }
+
+
 }
 
 class 홍길순 extends 전사 {
-    String 직업이름 = "홍길순";
-
-    void 공격() {
-        a무기.공격(직업이름);
+    홍길순(){
+        this.직업이름 = "홍길순";
     }
+
+
 }
 
 
@@ -845,4 +846,6 @@ class 칼 extends 무기 {
     }
 
 }
-*/
+
+
+
