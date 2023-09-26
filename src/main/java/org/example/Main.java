@@ -768,7 +768,7 @@ class 병사 {
 
 
 
-
+/*
 class Main {
     public static void main(String[] args) {
         전사 a전사 = new 홍길동();
@@ -847,5 +847,571 @@ class 칼 extends 무기 {
 
 }
 
+*/
 
 
+//class Main {
+//    public static void main(String[] args) {
+//        // 구현 시작
+//        전사 a전사 = new 전사();
+//        a전사.a무기 = new 칼();
+//        a전사.공격();
+//        a전사.a무기 = new 창();
+//        a전사.공격();
+//        a전사.a무기 = new 지팡이();
+//        a전사.공격();
+//        a전사.a무기 = new 전설의_지팡이();
+//        a전사.공격();
+//        // 구현 끝
+//
+//        // 출력
+//    /*
+//    칼(으)로 공격합니다.
+//    데미지 : 78
+//    창(으)로 공격합니다.
+//    데미지 : 80
+//    지팡이(으)로 공격합니다.
+//    데미지 : 12
+//    전설의_지팡이(으)로 공격합니다.
+//    데미지 : 120
+//    */
+//    }
+//}
+//
+///* 구현 시작 */
+//class 전사 {
+//    무기 a무기;
+//
+//    void 공격() {
+//        a무기.공격();
+//    }
+//}
+//
+//class 무기 {
+//    String 무기이름;
+//    int 데미지;
+//
+//    void 공격() {
+//        System.out.println(this.무기이름 + "(으)로 공격합니다.\n데미지 : " + this.데미지);
+//    }
+//}
+//
+//class 칼 extends 무기 {
+//    칼() {
+//        this.데미지 = 78;
+//        this.무기이름 = "칼";
+//    }
+//}
+//
+//class 창 extends 무기 {
+//    창() {
+//        this.데미지 = 80;
+//        this.무기이름 = "창";
+//    }
+//}
+//
+//class 지팡이 extends 무기 {
+//    지팡이() {
+//        this.데미지 = 12;
+//        this.무기이름 = "지팡이";
+//    }
+//}
+//
+//class 전설의_지팡이 extends 무기 {
+//    전설의_지팡이() {
+//        this.데미지 = 120;
+//        this.무기이름 = "전설의_지팡이";
+//    }
+//}
+//
+///* 구현 끝 */
+
+
+
+/*
+// 문제 : 구성(전사는 무기로 구성된다.)을 사용하여 중복을 제거해주세요.
+// Main 클래스는 수정불가능
+
+class Main {
+    public static void main(String[] args) {
+        전사타입A a전사타입A = new 전사타입A();
+        a전사타입A.공격();
+
+        전사타입B a전사타입B = new 전사타입B();
+        a전사타입B.공격();
+
+        전사타입C a전사타입C = new 전사타입C();
+        a전사타입C.공격();
+
+        전사타입D a전사타입D = new 전사타입D();
+        a전사타입D.공격();
+    }
+}
+
+
+class 전사 {
+    무기 a무기;
+
+    void 공격() {
+        a무기.공격();
+    }
+}
+
+class 전사타입A extends 전사 {
+    전사타입A() {
+        this.a무기 = new 칼();
+    }
+}
+
+class 전사타입B extends 전사 {
+    전사타입B() {
+        this.a무기 = new 칼();
+    }
+
+}
+
+class 전사타입C extends 전사 {
+    전사타입C() {
+        this.a무기 = new 활();
+    }
+
+}
+
+class 전사타입D extends 전사 {
+    전사타입D() {
+        this.a무기 = new 활();
+    }
+
+}
+
+class 무기 {
+    String 무기이름;
+    void 공격(){
+        System.out.println(this.무기이름 + "로 공격.");
+    }
+
+}
+
+class 활 extends 무기 {
+    활() {
+        this.무기이름 = "활";
+    }
+}
+
+class 칼 extends 무기 {
+    칼() {
+        this.무기이름 = "칼";
+    }
+}
+
+*/
+
+/*
+class Main {
+    public static void main(String[] args) {
+        청둥오리 a청둥오리 = new 청둥오리();
+        a청둥오리.날다();
+        // 출력 : 오리가 날개로 날아갑니다.
+
+        흰오리 a흰오리 = new 흰오리();
+        a흰오리.날다();
+        // 출력 : 오리가 날개로 날아갑니다.
+
+        고무오리 a고무오리 = new 고무오리();
+        a고무오리.날다();
+        // 출력 : 저는 날 수 없어요. ㅜㅠ
+
+        고무2오리 a고무2오리 = new 고무2오리();
+        a고무2오리.날다();
+        // 출력 : 저는 날 수 없어요. ㅜㅠ
+    }
+}
+
+class 오리 {
+    스킬 날기스킬;
+    void 날다() {
+        날기스킬.발동();
+    }
+}
+
+// 오리 => 부모 클래스
+// 흰오리 => 자식 클래스
+// 흰오리 extends 오리 => 흰오리가 오리의 능력을 물려 받는다.
+// "`흰오리`는 `오리`이다." 라고 자바에게 알려준다.
+// `A 는 B 이다.` 테스트에 통과하는 것만 상속이 가능하다.
+// 클래스와 객체는 명사이다.
+// 메서드는 동사이다.
+class 흰오리 extends 오리 {
+    흰오리(){
+        this.날기스킬 = new 날기가능();
+    }
+}
+
+class 청둥오리 extends 오리 {
+    청둥오리(){
+        this.날기스킬 = new 날기가능();
+    }
+}
+
+class 고무오리 extends 오리 {
+    // 메서드 재정의 라고 합니다.
+    // 메서드 오버라이드 라고도 합니다.
+    // 메서드 재정의 => 부모가 물려준 능력을 다시 구현한다.
+     고무오리(){
+            this.날기스킬 = new 날기불가();
+        }
+
+}
+
+class 고무2오리 extends 오리 {
+    고무2오리(){
+        this.날기스킬 = new 날기불가();
+    }
+
+}
+
+class 스킬{
+    void 발동(){}
+}
+class 날기가능 extends 스킬{
+    void 발동(){
+        System.out.println("오리가 난다");
+    }
+}
+class 날기불가 extends 스킬{
+    void 발동(){
+        System.out.println("오리가 못난다");
+    }
+}
+*/
+
+/*
+class Main {
+    public static void main(String[] args) {
+        청둥오리 a청둥오리 = new 청둥오리();
+        a청둥오리.날다();
+        // 출력 : 오리가 날개로 날아갑니다.
+
+        흰오리 a흰오리 = new 흰오리();
+        a흰오리.날다();
+        // 출력 : 오리가 날개로 날아갑니다.
+
+        고무오리 a고무오리 = new 고무오리();
+        a고무오리.날다();
+        // 출력 : 저는 날 수 없어요. ㅜㅠ
+
+        고무2오리 a고무2오리 = new 고무2오리();
+        a고무2오리.날다();
+        // 출력 : 저는 날 수 없어요. ㅜㅠ
+
+        a고무2오리.a비행아이템 = new 로켓비행아이템();
+        a고무2오리.날다();
+        // 출력 : 로켓파워로 날아갑니다.
+    }
+}
+
+abstract class 오리 {
+    비행아이템 a비행아이템;
+
+    오리() {
+        a비행아이템 = new 날개비행아이템();
+    }
+
+    void 날다() {
+        a비행아이템.작동();
+    }
+}
+
+class 흰오리 extends 오리 {
+
+}
+
+class 청둥오리 extends 오리 {
+
+}
+
+class 고무오리 extends 오리 {
+    고무오리() {
+        a비행아이템 = new 못나는비행아이템();
+    }
+}
+
+class 고무2오리 extends 오리 {
+    고무2오리() {
+        a비행아이템 = new 못나는비행아이템();
+    }
+}
+
+abstract class 비행아이템 {
+    abstract void 작동();
+}
+
+class 날개비행아이템 extends 비행아이템 {
+    void 작동() {
+        System.out.println("날개로 날아갑니다.");
+    }
+}
+
+class 못나는비행아이템 extends 비행아이템 {
+    void 작동() {
+        System.out.println("저는 못 날아요 ㅠㅠ");
+    }
+}
+
+class 로켓비행아이템 extends 비행아이템{
+    void 작동(){
+        System.out.println("로켓파워로 날아갑니다.");
+    }
+}
+*/
+
+/*
+class Main {
+    public static void main(String[] args) {
+        new 사람();
+        // 출력 : 사람이 태어났습니다.
+
+        new 사람(10);
+        // 출력 : 태어나서부터 10살인 사람이 태어났습니다.
+
+        new 사람(20);
+        // 출력 : 태어나서부터 20살인 사람이 태어났습니다.
+    }
+}
+
+class 사람{
+    사람(){
+        System.out.println("사람이 태어났습니다.");
+    }
+    사람(int 나이){
+        System.out.println("태어나서부터 "+ 나이+"살인 사람이 태어났습니다.");
+    }
+}
+
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        계산기 a계산기 = new 계산기();
+
+        System.out.println(a계산기.더하기(10, 20));
+        // 출력 : 30
+
+        System.out.println(a계산기.더하기(10, 20, 30));
+        // 출력 : 60
+
+        System.out.println(a계산기.더하기(10.5, 20, 30));
+        // 출력 : 60.5
+    }
+}
+
+class 계산기 {
+    int 더하기(int a, int b) {
+        return a+b;
+    }
+    int 더하기(int a, int b, int c) {
+        return a+b+c;
+    }
+    double 더하기(double a, int b, int c) {
+        return a+b+c;
+    }
+
+
+
+}
+
+*/
+/*
+
+class Main {
+    public static void main(String[] args) {
+        new 사과();
+        new 포도();
+        new 사람("홍길동");
+        new 사람();
+    }
+}
+
+class 사과 {
+    // 이렇게 생성자를 만들지 않은 클래스는 자바에서 자동으로 생성자를 하나 만들어준다.
+    // 참고로 자동으로 만들어 질 때 `매개변수 없는 생성자`가 만들어집니다.
+}
+
+class 포도 {
+    포도() {
+        // 이렇게 생성자를 직접 만들면 자바는 더 이상 자동으로 생성자를 만들어주지 않습니다.
+    }
+}
+
+class 사람{
+    사람(){}
+    사람(String 이름){}
+}
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+
+        System.out.println("== 청둥오리객체 생성시작 ==");
+        new 청둥오리();
+        System.out.println("== 청둥오리객체 생성끝 ==");
+//		 출력
+//		== 청둥오리객체 생성시작 ==
+//		생물이 생성되었습니다.
+//		동물이 생성되었습니다.
+//		오리가 생성되었습니다.
+//		청둥오리 생성되었습니다.
+//		== 청둥오리객체 생성끝 ==
+
+    }
+}
+
+class 생물 {
+    생물() {
+        // 이 함수는 부모 클래스 생성자를 자동으로 호출합니다.
+        System.out.println("생물이 생성되었습니다.");
+    }
+}
+class 동물 extends 생물 {
+    동물() {
+        // super(); // 부모 클래스의 생성자를 호출합니다. 생략가능합니다.
+        // 이 함수는 부모 클래스 생성자를 자동으로 호출합니다.
+
+        System.out.println("동물이 생성되었습니다.");
+    }
+
+}
+class 사람 extends 동물 {
+
+    사람() {
+        super(); // 부모 클래스의 생성자를 호출합니다.
+        // 이 함수는 부모 클래스 생성자를 자동으로 호출합니다.
+
+        System.out.println("사람이 생성되었습니다.");
+    }
+}
+class 오리 extends 동물{
+    오리(){
+        System.out.println("오리가 생성되었습니다.");
+    }
+}
+
+class 청둥오리 extends 오리{
+    청둥오리(){
+        System.out.println("청둥오리가 생성되었습니다.");
+    }
+}*/
+/*
+class Main {
+    public static void main(String[] args) {
+        new 사람();
+    }
+}
+
+class 동물 {
+    동물(String 이름) {
+        System.out.println("동물(String 이름) 실행됨!");
+        System.out.println("이름 : " + 이름);
+    }
+    동물(String 이름, int 나이) {
+        System.out.println("동물(String 이름, int 나이) 실행됨!");
+        System.out.println("이름 : " + 이름);
+        System.out.println("나이 : " + 나이);
+    }
+}
+
+class 사람 extends 동물 {
+    사람(){
+        super("김호랑");
+
+    }
+}*/
+/*
+class Main {
+    public static void main(String[] args) {
+        new 사람();
+        // 출력 : 사람이 초기화 됩니다.
+    }
+}
+
+class 동물 {
+    // 수정가능지역 시작
+   void init(){}
+    동물(){
+        init();
+    }
+    // 수정가능지역 끝
+}
+
+class 사람 extends 동물 {
+    void init() {
+        System.out.println("사람이 초기화 됩니다.");
+    }
+}*/
+/*
+class Main {
+    public static void main(String[] args) {
+        사람 a사람 = new 홍길동();
+        변호사 a변호사 = (변호사)a사람;
+        치과의사 a치과의사 = (치과의사)a사람;
+        성화봉송자 a성화봉송자 = (성화봉송자)a사람;
+    }
+}
+
+class 사람 {
+
+}
+class 홍길동 extends 사람 implements 변호사,치과의사,성화봉송자{
+
+}
+interface 변호사{
+
+}
+interface 치과의사{
+
+
+}
+interface 성화봉송자{
+
+}*/
+
+class Main {
+    public static void main(String[] args) {
+        사람 a사람 = new 사람();
+        a사람.id = 20;
+
+        System.out.println("제 번호는 " + a사람.id + " 입니다.");
+        // 출력 : 제 번호는 20 입니다.
+    }
+}
+
+class 사람 {
+    // private => 외부로 공개되지 않는다., 리모콘에 노출되지 않는다.
+    private int id;
+
+    void setId(int id) {
+        this.id = id;
+    }
+
+}
+
+
+public class Car {
+    String name;
+    int number;
+
+    public Car(String name, int number) {
+        this.name = name;
+        this.number = number;
+    }
+
+    public Car() {
+        // 자기 자신의 생성자를 호출
+        this("이름없음", 0);
+    }
+
+    public Car(String name) {
+        this(name, 0);
+    }
+
+}
