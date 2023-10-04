@@ -1374,7 +1374,7 @@ interface 치과의사{
 interface 성화봉송자{
 
 }*/
-
+/*
 class Main {
     public static void main(String[] args) {
         사람 a사람 = new 사람();
@@ -1395,23 +1395,114 @@ class 사람 {
 
 }
 
+*/
 
-public class Car {
-    String name;
-    int number;
+/*
+class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[10];
 
-    public Car(String name, int number) {
-        this.name = name;
-        this.number = number;
+        try{
+           for (var i = 0; i<=10;i++){
+               arr[i]=i;
+               System.out.println(i);
+           }
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("에러발생");
+        }
+    }
+}
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[10];
+
+        try {
+            채우다(arr);
+
+
+        //}
+        //catch (ArrayIndexOutOfBoundsException e) {
+        //    System.out.println("에러발생");
+        } catch (Exception e) {
+            System.out.println("에러2발생");
+        }
     }
 
-    public Car() {
-        // 자기 자신의 생성자를 호출
-        this("이름없음", 0);
+
+    static void 채우다(int[] arr) throws Exception{
+        for (var i = 0; i <= 10; i++) {
+            arr[i] = i;
+            System.out.println(i);
+        }
     }
 
-    public Car(String name) {
-        this(name, 0);
-    }
+}
 
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        int rs = 0;
+
+
+    }
+}
+class 계산기 {
+    static int 나누다(int a, int b) {
+        int rs = 0;
+
+        try {
+            rs = a / b;
+        }
+        catch ( ArithmeticException e ) {
+            rs = 0;
+        }
+
+        return rs;
+    }
+}
+*/
+
+
+import java.util.Scanner;
+/*
+class Main{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("이름을 입력하세요");
+        String name = scan.next();
+        System.out.println("나이를 입력하세요");
+        int age = scan.nextInt();
+        System.out.println("키를 입력하세요");
+        int height = scan.nextInt();
+
+
+        System.out.println("이름은 "+name+" 입니다.");
+        System.out.println(age+"살 입니다.");
+        System.out.println("키는 "+ height+ "cm 입니다.");
+    }
+}
+*/
+
+class Main {
+    public static void main(String[] args) {
+        char c1 = 'a';
+        char c2 = 'a';
+
+        System.out.println(c1 == c2); // true
+
+        // String 은 char의 순서있는 조합이다.
+        String s1 = new String("하하");
+        String s2 = "하하";
+        String s3 = new String("하하");
+
+        System.out.println(s1 == s2); // false
+        System.out.println(s1.equals(s2)); // true
+        System.out.println(s1 == s3);
+        System.out.println(s1.equals(s3));
+    }
 }

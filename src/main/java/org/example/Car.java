@@ -20,3 +20,10 @@ public class Car {
 }
 
 */
+
+class Car{
+    long a = 9223372036854775807l;
+    long b = 9223372036854775807l;
+
+
+}
