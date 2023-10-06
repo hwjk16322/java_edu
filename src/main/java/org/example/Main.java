@@ -1467,7 +1467,7 @@ class 계산기 {
 */
 
 
-import java.util.Scanner;
+import java.util.*;
 /*
 class Main{
     public static void main(String[] args) {
@@ -1487,7 +1487,7 @@ class Main{
     }
 }
 */
-
+/*
 class Main {
     public static void main(String[] args) {
         char c1 = 'a';
@@ -1505,4 +1505,452 @@ class Main {
         System.out.println(s1 == s3);
         System.out.println(s1.equals(s3));
     }
+}
+
+
+*/
+
+/*
+class Main {
+    public static void main(String[] args) {
+        System.out.println("별 100개 짜리 문장을 만드는 끔찍한 방법");
+        String s = "";
+
+        for ( int i = 0; i < 100; i++ ) {
+            s += "*";
+        }
+
+        System.out.println(s); // 이 문장을 만들기 위해 중간에 사용하지도 않을 문장 100개가 만들어집니다.
+
+        System.out.println("별 100개 짜리 문장을 만드는 좋은 방법");
+        StringBuilder sb = new StringBuilder();
+        for ( int i = 0; i < 100; i++ ) {
+            sb.append("*");
+        }
+
+        s = sb.toString();
+        System.out.println(s);
+
+        System.out.println("문장은 공공재 입니다. 즉 공유자원이기 때문에, 새로 만들 순 있어도, 기존의 것을 변경하면 안됩니다.");
+
+        String s1 = "안녕";
+        String s2 = "안녕";
+        String s3 = "안녕";
+        // 현재 s1, s2, s3는 같은 녀석을 가리킵니다.
+
+        // 아래 코드는 s3가 자신이 가리키고 있는 객체를 변경한게 아니라. 새 문장을 만들고 그것을 바라봅니다.(다시 말해 새 객체의 리모콘을 가지게 됩니다.)
+        s3 += "하세요.";
+
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+
+
+        int aaaa = 6;
+        int bbbb = 3;
+
+        System.out.println(aaaa*bbbb);
+    }
+}
+
+
+*/
+
+/*
+// Object 클래스와 toString
+class Main {
+    public static void main(String[] args) {
+        사람 a사람1 = new 사람("홍길동", 22,187);
+        사람 a사람2 = new 사람("홍길순", 23,168);
+        System.out.println(a사람1);
+        System.out.println(a사람2);
+    }
+}
+class 사람 extends Object {
+    String 이름;
+    int 나이;
+
+    int 키;
+    사람(String 이름, int 나이,int 키) {
+        this.이름 = 이름;
+        this.나이 = 나이;
+        this.키 = 키;
+    }
+
+    @Override
+    public String toString() {
+        return "사람[이름=" + 이름 + ",나이=" + 나이 + ",키=" +키 +"]";
+    }
+}
+*/
+
+/*
+class Main {
+    public static void main(String[] args) {
+        저장소.저장(10);
+        저장소.저장("안녕");
+        저장소.저장(new 사람());
+        저장소.저장(new 사과());
+        저장소.저장(5.5);
+        저장소.저장(false);
+        저장소.저장('a');
+
+        // 정수 계열
+        byte b = 0; // 1바이트
+        char c = 1; // 2바이트
+        short s = 2; // 2바이트
+        int i = 3; // 4바이트
+        long l = 4; // 8바이트
+
+        // 실수 계열
+        // 4.1f => float 형 실수를 의미
+        float f = 3.14f; // 4바이트
+        // 3.141592 => double 형 실수를 의미
+        double d = 3.141592; // 8 바이트
+
+        // 논리 계열
+        boolean bl = false; // 1/8 바이트, 1비트
+
+        저장소.저장(b);
+        저장소.저장(s);
+        저장소.저장(c);
+        저장소.저장(i);
+        저장소.저장(l);
+        저장소.저장(f);
+        저장소.저장(d);
+        저장소.저장(bl);
+    }
+}
+
+class 저장소{
+
+
+    public static void 저장(Object a) {
+    }
+
+}
+
+class 사람{
+
+}
+class 사과{
+
+}
+
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        String str = "axslekjxxlkzjxkljxxXXXssjxxXXxxX";
+
+        int xCount = 0;
+
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'x' || str.charAt(i) == 'X') {
+                xCount++;
+            }
+        }
+
+
+        System.out.println("xCount : " + xCount);
+    }
+}
+
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        자동차 a자동차 = new 자동차();
+
+
+        a자동차.달리다();
+    }
+}
+
+class 자동차 {
+     void 달리다() {
+        System.out.println("자동차가 달립니다.");
+    }
+}
+
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        수학 수학 = new 수학();
+
+        System.out.println(수학.PI);
+        // 출력 : 3.141592
+    }
+}
+
+
+class 수학{
+    double PI = 3.141592;
+}
+
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+
+        수학 수학 = new 수학();
+
+        System.out.println(수학.더하기(10, 20));
+        // 출력 : 30
+
+        System.out.println(수학.더하기(20, 20, 50));
+        // 출력 : 90
+    }
+}
+
+class 수학 {
+    int 더하기(int a, int b) {
+        return a + b;
+    }
+
+    int 더하기(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+*/
+
+/*
+class Main {
+    public static void main(String[] args) {
+        // 오직 객체만으로 해결하면 번거롭다.
+        System.out.println(수학.PI);
+
+        System.out.println(수학.더하기(10, 20));
+        // 출력 : 30
+    }
+}
+
+class 수학 {
+    // static 을 붙이면 해당 변수는 설계도에만 존재하게 됩니다.
+    static double PI = 3.141592;
+
+    static int 더하기(int a, int b) {
+        return a + b;
+    }
+}
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        사람 a사람1 = new 사람();
+        a사람1.이름 = "홍길동";
+        a사람1.나이 = 22;
+
+        a사람1.자기소개();
+        // 출력 : 저는 22살 홍길동 입니다.
+
+        사람 a사람2 = new 사람();
+        a사람2.이름 = "홍길순";
+        a사람2.나이 = 25;
+
+        a사람2.자기소개();
+        // 출력 : 저는 25살 홍길순 입니다.
+
+        a사람1.자기소개();
+        // 출력 : 저는 22살 홍길동 입니다.
+    }
+}
+
+class 사람 {
+    int 나이;
+    String 이름;
+
+     void 자기소개() {
+        System.out.println("저는 " + this.나이 + "살 " + this.이름 + " 입니다.");
+    }
+}
+
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+        저장소<Integer> a저장소1 = new 저장소<>();
+
+        a저장소1.setData(30);
+        int a = a저장소1.getData();
+
+        System.out.println(a);
+
+        저장소<Double> a저장소2 = new 저장소<>();
+
+        a저장소2.setData(5.5);
+        double b = a저장소2.getData();
+
+        System.out.println(b);
+
+
+        저장소<사과> a저장소3 = new 저장소<>();
+
+        a저장소3.setData(new 사과());
+        사과 c = a저장소3.getData();
+
+        System.out.println(c);
+    }
+}
+
+class 저장소<T> {
+    T data;
+
+    T getData() {
+        return (T)data;
+    }
+
+    void setData(T inputedData) {
+        this.data = inputedData;
+    }
+}
+
+class 사과{
+
+}
+*/
+/*
+class Main {
+    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("숫자 입력 : ");
+//        int 숫자 = sc.nextInt();
+//        System.out.println(숫자);
+//
+//        sc.close();
+        int a = 0;
+        while (a == 0) {
+            try {
+                Scanner sc = new Scanner(System.in);
+
+                System.out.print("숫자 입력 : ");
+                int 숫자 = sc.nextInt();
+                if (숫자 >= 0) {
+
+                    System.out.println(숫자);
+                    a++;
+                } else {
+                    System.out.println("양수만 입력해주세요");
+                }
+            } catch (Exception e) {
+                System.out.println("숫자만 입력해주세요");
+            }
+
+
+        }
+
+
+    }
+}
+
+*/
+import java.util.Scanner;
+/*
+class Main {
+    public static void main(String[] args) {
+        List<Integer> arrlist = new ArrayList<>();
+        for (int i = 10; i <= 100; i++) {
+            if (i % 10 == 0) {
+                arrlist.add(i);
+
+            }
+        }
+        int answer = 0;
+        for (int i = 0; i < arrlist.size(); i++) {
+            answer = answer + arrlist.get(i);
+        }
+
+        System.out.println(answer);
+    }
+}
+
+*/
+
+/*
+class Main {
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+
+        List<Integer> arrlist = new ArrayList<>();
+
+        while (true) {
+            System.out.printf("숫자를 입력해주세요(-1 : 종료) : ");
+            int num = sc.nextInt();
+
+            if (num == -1) {
+                System.out.println("입력을 종료합니다.");
+                break;
+            }
+            int i = 0;
+            arrlist.add(num);
+        }
+        Collections.sort(arrlist);
+        StringBuilder sb = new StringBuilder();
+
+        for (int number : arrlist) {
+            if (sb.isEmpty() == false) {
+                sb.append(", ");
+            }
+
+            sb.append(number);
+        }
+
+        System.out.printf("입력한 숫자(오름차순) : %s\n", sb);
+        System.out.println("프로그램을 종료합니다.");
+
+        sc.close();
+
+    }
+}
+
+*/
+/*
+class Main{
+    public static void main(String[] args) {
+        Map<String, Object> p1 = new HashMap<>();
+
+        p1.put("이름","홍길동");
+        p1.put("나이","28");
+        p1.put("키","183");
+
+        Map<String, Object> p2 = new HashMap<>();
+
+        p1.put("이름","홍길순");
+        p1.put("나이","27");
+        p1.put("키","153");
+
+    }
+}
+
+*/
+
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println(" == 명언 앱 == ");
+        System.out.println(" 명령어 : 종료");
+        System.out.print("명령) ");
+
+
+        Object 명령어 = sc1.next();
+        while (true) {
+            if (명령어.equals("종료")) break;
+
+            System.out.println(" == 명언 앱 == ");
+            System.out.println(" 명령어 : 종료");
+            System.out.print("명령) ");
+            명령어 = sc1.next();
+            if (명령어.equals("등록")){
+                System.out.print("명언 : ");
+
+            }
+        }
+
+    }
+
 }
