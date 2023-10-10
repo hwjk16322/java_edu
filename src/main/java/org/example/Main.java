@@ -1932,25 +1932,7 @@ class Main{
 class Main {
     public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
-        System.out.println(" == 명언 앱 == ");
-        System.out.println(" 명령어 : 종료");
-        System.out.print("명령) ");
-
-
-        Object 명령어 = sc1.next();
-        while (true) {
-            if (명령어.equals("종료")) break;
-
-            System.out.println(" == 명언 앱 == ");
-            System.out.println(" 명령어 : 종료");
-            System.out.print("명령) ");
-            명령어 = sc1.next();
-            if (명령어.equals("등록")){
-                System.out.print("명언 : ");
-
-            }
-        }
-
+        new App(sc1).run();
     }
 
 }
